@@ -1,7 +1,9 @@
-# vcpkg-boost
-Example of using vcpkg with boost
 
-Starting using vcpkg to build boost from scratch on my machine was not easy.
+# vcpkg-boost
+
+## Example of using vcpkg with boost
+
+Starting using [vcpkg](https://github.com/Microsoft/vcpkg) to build boost from scratch on my machine was not easy.
 vcpkg is a greate tool to compile boost
 
 > git clone https://github.com/Microsoft/vcpkg
@@ -25,4 +27,4 @@ Why linker can't find libraries? Can't find boost_system lib or problem with /MT
 
 I share here a CMakeFile.txt that works.
 
-Simply check build.bat and adapt vcpkg path.
+Simply edit build.bat and adapt vcpkg path.
