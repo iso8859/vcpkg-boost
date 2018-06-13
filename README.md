@@ -13,11 +13,12 @@ vcpkg is a greate tool to compile boost
 I wanted to link boost in static and build x86 and x64 versions in debug and release
 
 vcpkg install boost:x86-windows-static
+
 vcpkg install boost:x64-windows-static
 
 And now the problems begins
 
-Why vcpkg build boost with Visual Studio 2015, VS2017 is installed? Generated boost lib contains -vc140- in file name
+Why vcpkg build boost with Visual Studio 2015, VS2017 is installed on my machine? Generated boost lib contains -vc140- in file name
 
 Why "vcpkg.exe integrate install" does nothing?
 
@@ -25,6 +26,6 @@ Why I can't build in debug mode
 
 Why linker can't find libraries? Can't find boost_system lib or problem with /MT vs /MD flag?
 
-I share here a CMakeFile.txt that works.
+##### I share here a CMakeFile.txt that works.
 
 Simply edit build.bat and adapt vcpkg path.
