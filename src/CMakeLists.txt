@@ -3,20 +3,20 @@
 cmake_minimum_required(VERSION 3.11)
 
 #So we can build in debug or release
-set			(CMAKE_BUILD_TYPE "Debug")
+set						(CMAKE_BUILD_TYPE "Debug")
 
 #Set the static/dynamic runtime
-include			(${CMAKE_CURRENT_SOURCE_DIR}/cmake_msvc.cmake)
+include					(${CMAKE_CURRENT_SOURCE_DIR}/cmake_msvc.cmake)
 configure_msvc_runtime	("${VCPKG_TARGET_TRIPLET}")
 
-project			(test-${VCPKG_TARGET_TRIPLET})
-FIND_PACKAGE		(Boost REQUIRED)
+project					(test-${VCPKG_TARGET_TRIPLET})
+FIND_PACKAGE			(Boost REQUIRED)
 
-#dump_all		()
+#dump_all				()
 
-include_directories	(${Boost_INCLUDE_DIR})
-add_executable		(${PROJECT_NAME} test.cpp)
+include_directories		(${Boost_INCLUDE_DIR})
+add_executable			(${PROJECT_NAME} test.cpp)
 target_link_libraries	(${PROJECT_NAME} 
-			 optimized ${Boost_LIBRARY_DIRS}/boost_system-vc140-mt.lib
-			 debug ${Boost_LIBRARY_DIRS}/../debug/lib/boost_system-vc140-mt-gd.lib
-			 )
+						optimized ${Boost_LIBRARY_DIRS}/boost_system-vc140-mt.lib
+						debug ${Boost_LIBRARY_DIRS}/../debug/lib/boost_system-vc140-mt-gd.lib
+						)
