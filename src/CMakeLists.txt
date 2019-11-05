@@ -17,6 +17,6 @@ FIND_PACKAGE			(Boost REQUIRED)
 include_directories		(${Boost_INCLUDE_DIR})
 add_executable			(${PROJECT_NAME} test.cpp)
 target_link_libraries	(${PROJECT_NAME} 
-						optimized ${Boost_LIBRARY_DIRS}/boost_system-vc140-mt.lib
-						debug ${Boost_LIBRARY_DIRS}/../debug/lib/boost_system-vc140-mt-gd.lib
+						optimized ${Boost_THREAD_LIBRARY_RELEASE}
+						debug ${Boost_THREAD_LIBRARY_DEBUG}
 						)
